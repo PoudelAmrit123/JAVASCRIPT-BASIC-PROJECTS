@@ -18,6 +18,7 @@
      let secertnumber = Math.trunc(Math.random()*20)+1 ;
 
       let score = 20 ;
+      let highscore = 0;
 
 
      
@@ -44,6 +45,12 @@
              document.querySelector('body').style.backgroundColor = '#60b347'
 
              document.querySelector('.number').style.width = '30rem';
+
+
+             if ( score > highscore){
+                 highscore = score ;
+                 document.querySelector('.highscore').textContent = highscore ;
+             }
          }
          
           // input is too high 
@@ -86,8 +93,8 @@
 
         secertnumber = Math.trunc(Math.random()*20)+1 ;
 
-
-      document.querySelector('.score').textContent = 20 ;
+ score = 20 ; 
+      document.querySelector('.score').textContent = score;
 
       document.querySelector('body').style.backgroundColor = '#222' ;
 
