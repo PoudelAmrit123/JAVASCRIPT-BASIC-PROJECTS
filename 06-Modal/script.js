@@ -37,9 +37,33 @@
         })
 
 
-   }
+ 
 
+   } 
+
+ 
+
+
+   document.addEventListener('keydown' , function (e) {
+
+    
+    //   console.log(e.key);
+  
+     if(e.key==='Escape'){
+         if(!modal.classList.contains('hidden')){
+            modal.classList.add('hidden');
+            overlay.classList.add('hidden'); 
+         }
+     }
    
+    })
+     
+
+
+
+
+
+  
 
 
 
