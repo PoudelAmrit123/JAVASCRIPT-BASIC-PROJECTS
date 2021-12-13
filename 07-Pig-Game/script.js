@@ -21,18 +21,38 @@ const current1 = document.querySelector('#current--1') ;
   const btnhold = document.querySelector('.btn--hold');
 // starting condition
 
-  score0.textContent = 0;
-  score1.textContent = 0;
-  dice.classList.add('hidden');
+       
 
+ let  scores , activeplayer ,  currentscore , playing  ;
 
-    const scores = [ 0 , 0];
-let activeplayer = 0;
-    let currentscore =0 ;
-  let playing = true ;
+       const init  = function(){
+       
+        scores = [ 0 , 0];
+        activeplayer = 0;
+        currentscore =0 ;
+        playing = true ;
+       
+       score0.textContent = 0;
+       score1.textContent = 0;
+       current0.textContent = 0 ;
+       current1.textContent = 0 ;
+       dice.classList.add('hidden');
+       
+       
+       player0.classList.add('player--active');
+       player1.classList.remove('player--active');
+       
+       
+       player0.classList.remove('player--winner');
+       player1.classList.remove('player--winner');
+       
+       
+       }
 
-  
-  btnroll.addEventListener('click' , function(){
+        init();
+       
+       
+       btnroll.addEventListener('click' , function(){
 
       if ( playing){
    const dicen = Math.trunc(Math.random()*6)+1;
@@ -82,7 +102,7 @@ scores[activeplayer] += currentscore ;
 
           document.querySelector(`.player--${activeplayer}`).classList.add('player--winner')
 
-
+          dice.classList.add('hidden');
 
           document.querySelector(`.player--${activeplayer}`).classList.remove('player--active');
 
@@ -108,8 +128,7 @@ activeplayer = activeplayer === 0 ? 1 : 0 ;
 
 
 
-
-
+  btnnew.addEventListener('click' , init);
 
 
 
