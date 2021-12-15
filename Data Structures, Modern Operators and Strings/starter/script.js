@@ -1,5 +1,8 @@
 'use strict';
 
+// `  `
+
+   
 // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
@@ -17,24 +20,141 @@ const restaurant = {
        return [this.starterMenu[mainIndex] ,this.mainMenu[secondIndex]] 
 
 
-    }
+    } , 
+  // Destructing Object and passing only object using function 
+  
+     oderdelivery : function( {time , address ,  mainIndex ,  secondIndex} ){
+
+      console.log( ` Order received!  ${this.starterMenu[mainIndex]} and ${this.mainMenu[secondIndex]}  will be delive rd at ${time}  in ${address}`);
+     } , 
   
 
-  // openingHours: {
-  //   thu: {
-  //     open: 12,
-  //     close: 22,
-  //   },
-  //   fri: {
-  //     open: 11,
-  //     close: 23,
-  //   },
-  //   sat: {
-  //     open: 0, // Open 24 hours
-  //     close: 24,
-  //   },
-  // },
-};
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+
+
+    fri: {
+      open: 11,
+      close: 23,
+    },
+
+
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+
+
+
+  }
+  
+    
+
+}
+   
+      restaurant.oderdelivery({
+  time : '22:30' , 
+  address : 'Milan chowk chitwan'  , 
+     mainIndex : 2 ,
+     secondIndex : 1 ,
+
+      }) ; 
+
+
+
+
+    const { name , categories ,starterMenu } =  restaurant  ; 
+ console.log(name , categories , starterMenu);
+
+
+    // changing  the name of the arry 
+
+      const { name :  Resturnet  , categories  : country } = restaurant ; 
+
+        console.log( Resturnet , country );
+
+         // Nested object 
+ //nested object with changing the name 
+         const { fri :{ open : o, close : c}} = restaurant.openingHours ; 
+         console.log( o , c );
+
+
+
+
+     
+
+
+
+
+
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*
+
+
+        // Destructing the arry //
 
 const arr = [2, 4, 5];
 
@@ -72,3 +192,6 @@ console.log(a, b, c);
 
 
         console.log( i ,  j ,  l);
+
+          */
+
