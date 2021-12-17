@@ -67,7 +67,7 @@ const restaurant = {
    
 
        // Real world Example 
-       
+
           const indegrent = [ prompt("Lets make pasta ! Your indegerent 1?") , prompt("Lets make pasta ! Your indegerent 2?") , prompt("Lets make pasta ! Your indegerent 3?")  ];
 
           restaurant.orderfood(...indegrent);
@@ -141,6 +141,10 @@ const restaurant = {
 
 
 
+
+
+
+      
 
     const { name , categories ,starterMenu } =  restaurant  ; 
  console.log(name , categories , starterMenu);
