@@ -216,6 +216,9 @@ console.log(a, b, c);
         const [ i ,j , [k , , , l]] =nested ;
 
 
+
+
+
         console.log( i ,  j ,  l);
 
           */
