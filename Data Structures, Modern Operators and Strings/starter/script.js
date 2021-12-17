@@ -21,8 +21,84 @@ const restaurant = {
 
 
     } , 
+
+     orderfood: function (indg1 , indg2 ,indg3) {
+   console.log(` Here is your declicious pasta with ${indg1} , ${indg2} and ${indg3}.  `);    
+     }
+  }
+
+
+  //Spread Operator
+
+       const arr = [ 1,  2, 3 , 4];
+
+       const newarr = [ 6 , 5 , ...arr];
+       console.log(newarr);
+       console.log(...newarr);
+
+
+
+  const newarr1 = [...restaurant.mainMenu , 'Pasta'];//we are forming the new arry not manupulating the main menu arry 
+  console.log(newarr1);
+ 
+
+    //copying the arry 
+
+    const mainmenucopy = [...restaurant.mainMenu];
+   console.log(mainmenucopy);
+    // join 2 arry
+
+    const joinarry = [ ...restaurant.mainMenu , ...mainmenucopy];
+    console.log(joinarry);
+
+
+
+  // Iterables : arry , string , maps but not the object
+
+      const name = 'Amrit';
+
+      const lettrs = [ ...name , 's'];
+      console.log(lettrs);
+
+       //but it doesnot work on this 
+
+      //  console.log(`  ${...lettrs} poudel `);
+
+   
+
+       // Real world Example 
+       
+          const indegrent = [ prompt("Lets make pasta ! Your indegerent 1?") , prompt("Lets make pasta ! Your indegerent 2?") , prompt("Lets make pasta ! Your indegerent 3?")  ];
+
+          restaurant.orderfood(...indegrent);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // Destructing Object and passing only object using function 
-  
+   /*
      oderdelivery : function( {time , address ,  mainIndex ,  secondIndex} ){
 
       console.log( ` Order received!  ${this.starterMenu[mainIndex]} and ${this.mainMenu[secondIndex]}  will be delive rd at ${time}  in ${address}`);
@@ -82,7 +158,7 @@ const restaurant = {
          console.log( o , c );
 
 
-
+ */
 
      
 
@@ -94,57 +170,6 @@ const restaurant = {
 
 
          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
