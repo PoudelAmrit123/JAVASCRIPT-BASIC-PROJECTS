@@ -48,6 +48,9 @@ const restaurant = {
   }
 
     //REST OPERATOR
+    //Use Mainlyin destructing
+
+    /*
 
        const [a ,  b , ...others1  ] = [ 1  , 2 ,4 , 9];
 console.log(a ,  b  , others1);
@@ -80,6 +83,18 @@ console.log(a ,  b  , others1);
        
 
 
+ */
+
+
+          // Spread VS Rest 
+
+
+         //  const arr= [2 , 4 , 5 , 6 , 8];
+
+          // if we need to pass this arr to the function we can pass this  using spread operator like callingfunction(2 , 4 , ...others)  instead of typing  all the parameters .
+
+
+        //  and there in the function argument we can simply we rest operator like function(...others) which is as equal to passing the whole arry 
 
 
 
@@ -285,4 +300,83 @@ console.log(a, b, c);
         console.log( i ,  j ,  l);
 
           */
+
+
+          
+
+
+        // SHORT CIRCUTING
+ // Short Circuting of the ORR operator
+        restaurant.noofguest = 23;
+
+         const guest = restaurant.noofguest  || 10 ;
+
+          console.log(guest);
+
+          //Or will return the first truthy value  or will return the last  value if all of them are falsy 
+
+
+            // Short Circuting of the AND operator
+ 
+
+            console.log('hello' && 23 &&  null && 'jonas');
+
+              // Here it will check hello is truthy or falsy as it is truthy it moves on and check weather 23 is truthy or not as it is also the truthy value then it checks null and as it is falsy value the it will log this one 
+              
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
