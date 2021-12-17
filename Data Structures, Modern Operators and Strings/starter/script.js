@@ -24,12 +24,88 @@ const restaurant = {
 
      orderfood: function (indg1 , indg2 ,indg3) {
    console.log(` Here is your declicious pasta with ${indg1} , ${indg2} and ${indg3}.  `);    
-     }
+     },
+
+     openingHours: {
+      thu: {
+        open: 12,
+        close: 22,
+      },
+  
+  
+      fri: {
+        open: 11,
+        close: 23,
+      },
+  
+  
+      sat: {
+        open: 0, // Open 24 hours
+        close: 24,
+      },
+  
+    }
   }
+
+    //REST OPERATOR
+
+       const [a ,  b , ...others1  ] = [ 1  , 2 ,4 , 9];
+console.log(a ,  b  , others1);
+
+   // in obejct 
+     
+    const {sat , ...others} = restaurant.openingHours;
+
+    console.log(others);
+
+
+    //function
+
+    const add = function(...numbers1 ){
+      let sum = 0 ; 
+     for ( let i =0 ; i<numbers1.length ; i++){
+       sum += numbers1[i];
+     }
+       
+ console.log(sum);
+    };
+
+       add(2 , 3);
+       add(2 , 5 , 7 ,3);
+       add(2 , 3  ,6, 3 , 9);
+       add(2 ,1 , 8 ,  3);
+
+        const x = [10 , 20 , 30 ];
+        add(...x);
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   //Spread Operator
-
+ /*
        const arr = [ 1,  2, 3 , 4];
 
        const newarr = [ 6 , 5 , ...arr];
@@ -73,7 +149,7 @@ const restaurant = {
           restaurant.orderfood(...indegrent);
 
 
-
+  */
 
 
 
@@ -105,24 +181,7 @@ const restaurant = {
      } , 
   
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-
-
-    fri: {
-      open: 11,
-      close: 23,
-    },
-
-
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-
+ 
 
 
   }
@@ -144,7 +203,7 @@ const restaurant = {
 
 
 
-      
+
 
     const { name , categories ,starterMenu } =  restaurant  ; 
  console.log(name , categories , starterMenu);
