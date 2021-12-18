@@ -8,6 +8,29 @@ const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
+
+const   openingHours =  {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+
+
+  fri: {
+    open: 11,
+    close: 23,
+  },
+
+
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+
+}
+
+
+
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -25,7 +48,11 @@ const restaurant = {
      orderfood: function (indg1 , indg2 ,indg3) {
    console.log(` Here is your declicious pasta with ${indg1} , ${indg2} and ${indg3}.  `);    
      },
+ // Es6 enhanced obejct literals 
+               openingHours, 
+      // openingHours1 : openingHours , //Basic obecjt literals.
 
+     /*
      openingHours: {
       thu: {
         open: 12,
@@ -45,7 +72,41 @@ const restaurant = {
       },
   
     }
+
+
+
+     */
   }
+
+
+
+     // OBJECT LITERALS
+
+
+    //  const   openingHours =  {
+    //   thu: {
+    //     open: 12,
+    //     close: 22,
+    //   },
+  
+  
+    //   fri: {
+    //     open: 11,
+    //     close: 23,
+    //   },
+  
+  
+    //   sat: {
+    //     open: 0, // Open 24 hours
+    //     close: 24,
+    //   },
+  
+    // }
+
+  
+
+
+
 
     //REST OPERATOR
     //Use Mainlyin destructing
@@ -306,6 +367,9 @@ console.log(a, b, c);
 
 
         // SHORT CIRCUTING
+
+
+          /*
  // Short Circuting of the ORR operator
         restaurant.noofguest = 23;
 
@@ -322,14 +386,27 @@ console.log(a, b, c);
             console.log('hello' && 23 &&  null && 'jonas');
 
               // Here it will check hello is truthy or falsy as it is truthy it moves on and check weather 23 is truthy or not as it is also the truthy value then it checks null and as it is falsy value the it will log this one 
-              
-
-
-              
 
 
 
+              // Nullish coalescing
+   // It doesnot consider ZEro(0) and empty string ''  as falsy value 
+              restaurant.noofguest1 = 0;
 
+              const guest1 = restaurant.noofguest1  ?? 10 ;
+     
+               console.log(guest1);
+
+
+
+
+
+    */
+
+
+
+
+               
 
 
 
