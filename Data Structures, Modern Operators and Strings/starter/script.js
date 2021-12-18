@@ -79,6 +79,48 @@ const restaurant = {
   }
 
 
+       
+       //OPTIONAL CHAINING 
+  
+          //without optional chainging
+      if(restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
+
+       // With Optional chaining 
+       
+ console.log(restaurant.openingHours?.mon?.open);
+   // if openinghours exists then it moves to the monday and checks whether the mon exists or not if exists than it checks for open .
+
+  // OPtional Chaning in Arry 
+
+      const users = [ { name: ' Amrit' , email : 'amritpoudel433@gmail.com' }];
+
+ console.log( users[0]?.name ?? 'user empty error' );
+
+ console.log( users[0]?.email ?? 'no email exist');
+
+
+     // here it checks weather the users email exits or not it exixts then it moves towards the next line of the code which is actually nullish operator which operate according to its properties
+
+     
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
      // OBJECT LITERALS
 
