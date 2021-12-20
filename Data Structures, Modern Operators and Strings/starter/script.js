@@ -21,6 +21,16 @@ const   openingHours =  {
     close: 23,
   },
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 
   sat: {
     open: 0, // Open 24 hours
@@ -28,6 +38,11 @@ const   openingHours =  {
   },
 
 }
+
+
+
+
+
 
 
 
