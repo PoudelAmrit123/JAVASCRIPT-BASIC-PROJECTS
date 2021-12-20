@@ -125,6 +125,7 @@ const restaurant = {
 
           // Looping Obejct _ Object key_Values 
 
+            /*
 
 
           //properties name 
@@ -163,11 +164,50 @@ const restaurant = {
 
 L
 
+  */
 
 
+  
+  // SETS
+
+    
+   const ordersets = new Set ([
+     'Amrit' , 
+      'poudel' ,
+    'amrit' ,
+     'poudel' ,
+      'amrit']);
+
+ console.log(ordersets);
           
 
+console.log( new Set ('AMrit'));
+console.log(ordersets.size);
 
+console.log(ordersets.has('amrit'));
+console.log(ordersets.has('poudel1'));
+
+ordersets.add('amrit');
+ordersets.add('garlic')
+ordersets.delete('amrit');
+// ordersets.clear(); Is to clear all the element from  the sets 
+
+
+console.log(ordersets);
+
+
+for( const order of ordersets) console.log(ordersets);
+
+  // Practical Example of the sets 
+
+
+  const staff = [ 'waiter' , 'chef' , 'Manager' , 'waiter' , 'service Man'];
+
+
+  // const staffunique = new Set(staff);
+  const staffunique = [...new Set(staff)];// To get the staffunique obejct in the arry form 
+
+  console.log(staffunique);
      
 
 
