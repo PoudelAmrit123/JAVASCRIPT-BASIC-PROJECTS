@@ -236,10 +236,58 @@ for( const order of ordersets) console.log(ordersets);
 
            // Maps also have same property as sets like   HAS , DELETE , CLEAR .
 
-           
 
-           
+
+           //NEw way of writing the map 
+
+           const newmap = new Map ([
+   [ 'Question' , 'Which PL is good ?'] , 
+   [ 1 , 'c'],
+   [2 , 'java'],
+   [3 ,'javascript'],
+   ['correct' , 3],
+    [ true , 'Correct 🎉'],
+    [false , ' Wrong Answer 😒']
+
+
+
+
+
+           ]);
+           console.log(newmap );
         
+
+           // COnverting Object into map 
+console.log(Object.entries(openingHours));
+
+const objectmap = new Map (Object.entries(openingHours));
+ console.log(objectmap);
+
+
+     //Quiz App
+
+     console.log(newmap.get('Question'));
+
+     for( const [key ,values] of newmap){
+
+      if( typeof key === 'number'){
+        console.log( ` Answer ${key} : ${values} `);
+      }
+     };
+
+     const answer =   Number(prompt(' Whats your Answer'));
+
+      console.log(answer);
+
+       console.log( newmap.get(newmap.get('correct')=== answer));
+     
+
+       
+
+ 
+
+
+
 
 
 
