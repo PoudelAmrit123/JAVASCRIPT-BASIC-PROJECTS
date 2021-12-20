@@ -82,6 +82,8 @@ const restaurant = {
        
        //OPTIONAL CHAINING 
   
+
+         /*
           //without optional chainging
       if(restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
 
@@ -101,8 +103,165 @@ const restaurant = {
 
      // here it checks weather the users email exits or not it exixts then it moves towards the next line of the code which is actually nullish operator which operate according to its properties
 
-     
+
     
+ */
+
+
+          // Looping Obejct _ Object key_Values 
+
+
+
+          //properties name 
+  const properties  = Object.keys(openingHours);
+  console.log(properties);
+
+ let  opendays = ( `  we are open for ${properties.length} days : `);
+
+
+  for( const day of properties){
+    
+
+ 
+    opendays += ` ${day}, ` ;
+  }
+
+  console.log(opendays);
+             
+
+
+
+  // properties Value 
+
+   const openvalues  = Object.values(openingHours);
+   console.log(openvalues);
+
+   //entires Obejct
+
+   const entiresobject = Object.entries(openingHours);
+   console.log(entiresobject);
+
+      //  [ key ,values ]
+   for(const  [key , {open , close }]  of entiresobject){
+     console.log(` On  ${key} we open at ${open } and close at ${close}. `);
+   }
+
+L
+
+
+
+          
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
