@@ -170,7 +170,7 @@ L
   
   // SETS
 
-    
+     /*
    const ordersets = new Set ([
      'Amrit' , 
       'poudel' ,
@@ -212,7 +212,34 @@ for( const order of ordersets) console.log(ordersets);
 
 
 
+ */
 
+
+
+      // MAPS FUNDAMENTAL!
+
+         const rest = new Map();
+
+           rest.set('Name' , 'Amrit Poudel');
+         rest.set('Cateogories' ,  ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],).set( 'Location' , ['Via Angelo Tavanti 23, Firenze, Italy']).set('open' , 10 ).set('close' , 20);
+
+
+          rest.set(true , 'We are open');
+          rest.set(false , 'We are close');
+
+        console.log(rest.get('Location'));
+
+
+        const time = 12;
+
+        console.log( rest.get( time> rest.get('open') && time < rest.get('close')));// here we firt find wether the statement is true or not if true than using rest get we find the the suitable statement for true and false value
+
+           // Maps also have same property as sets like   HAS , DELETE , CLEAR .
+
+           
+
+           
+        
 
 
 
