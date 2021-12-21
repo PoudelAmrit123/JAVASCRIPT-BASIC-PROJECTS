@@ -184,18 +184,70 @@ const restaurant = {
  console.log(plane1.startsWith('Air'));
 
 
+              // SPlit method
+
+              console.log('a+very+good+man'.split('+'));
+
+              const [Firstname , secondname] = 'Amrit Poudel'.split(' ');
+
+              const newname = ['Mr.' ,Firstname , secondname.toUpperCase()].join(' ');
+              console.log(newname);
+
+
+
+// Captilaixation of the name
+
+      const capatialization = function (name)
+{
+  const names = name.split(' ');
+const   namescollection = [];
+  for ( const n of names){
+
+    namescollection.push(  n[0].toUpperCase() +n.slice(1));
+
+  }
+console.log(namescollection.join(' '));
+
+
+
+}
+
+capatialization( 'amrit pdl maxii');
 
 
 
 
 
+      //Padding
+
+      const  message = 'Go to the gym ';
+
+      console.log(message.padStart(20 , '+').padEnd(25 , '+'));
+      // here + sign is added at the start of the message string and it total length will be of 20 wheras due to the padend it will add + sign at the last of the string and make its whole length of the string of lengh 25
+
+
+           //paddng real world example of credi card
+
+           const maskcredit = function (number){
+const str = String(number);
+
+  const trim = str.slice(-4);
+
+  const finaltrim =  trim.padStart(str.length , '*'); 
+  console.log(finaltrim);
+           }
 
 
 
+maskcredit(6643614868478);
 
 
+  //repeat
 
-
+  const message2 = ' Bad weather .. All Plane depature is delayed';
+  console.log(message2.repeat(5));
+  //reapting the same message over and again
+  
 
 
 
