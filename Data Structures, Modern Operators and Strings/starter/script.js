@@ -105,6 +105,11 @@ const restaurant = {
 
  const plane = 'A320' ;
 
+
+ console.log(airline.toLowerCase());
+ console.log(airline.toUpperCase());
+
+
   console.log(airline.length);
   console.log(airline[0]);
   console.log(airline[1]);
@@ -132,17 +137,51 @@ const restaurant = {
 
 
    }
-
+   
    checkmiddleseat('11B')
    checkmiddleseat('11C')
    checkmiddleseat('11E')
    checkmiddleseat('11A')
 
 
+  // Fix Capatilaization of the name 
+
+  const name = 'jOnAs' ;
+  const passlower = name.toLowerCase();
+  const correct = passlower[0].toUpperCase()
+ + passlower.slice(1);
+
+ console.log(correct);
+
+   // Fixing the email
+
+   const email = 'amritpoudel433@gmail.com'
+
+    const writingemail = '  Amritpoudel433@gmail.com \n';
+
+      const correctemail = writingemail.toLowerCase().trim() ; 
+      console.log(correctemail);
 
 
+      //Replacing 
+
+      const priceuk = '233,45£'
+
+      const priceusa = priceuk.replace('£' , '$').replace(',' ,'.')
+      console.log(priceusa);
 
 
+      const announcement = ' All the passenger move to the door 23 , to the door 23!';
+
+      console.log(announcement.replaceAll('door' , 'gate'));
+
+
+  
+          //Bollen
+        const plane1 = 'Air bus '
+
+        console.log(plane1.includes('Air1'));
+ console.log(plane1.startsWith('Air'));
 
 
 
