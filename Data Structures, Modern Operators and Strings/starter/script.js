@@ -63,6 +63,40 @@ const restaurant = {
      orderfood: function (indg1 , indg2 ,indg3) {
    console.log(` Here is your declicious pasta with ${indg1} , ${indg2} and ${indg3}.  `);    
      },
+
+
+        // STIRNG 
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  // Es6 enhanced obejct literals 
                openingHours, 
       // openingHours1 : openingHours , //Basic obecjt literals.
@@ -218,6 +252,8 @@ for( const order of ordersets) console.log(ordersets);
 
       // MAPS FUNDAMENTAL!
 
+
+        /*
          const rest = new Map();
 
            rest.set('Name' , 'Amrit Poudel');
@@ -258,6 +294,7 @@ for( const order of ordersets) console.log(ordersets);
         
 
            // COnverting Object into map 
+
 console.log(Object.entries(openingHours));
 
 const objectmap = new Map (Object.entries(openingHours));
@@ -282,134 +319,9 @@ const objectmap = new Map (Object.entries(openingHours));
        console.log( newmap.get(newmap.get('correct')=== answer));
      
 
+        */
+
        
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
      // OBJECT LITERALS
 
