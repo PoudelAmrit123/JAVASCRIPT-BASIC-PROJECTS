@@ -65,38 +65,6 @@ const restaurant = {
      },
 
 
-        // STIRNG 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  // Es6 enhanced obejct literals 
                openingHours, 
       // openingHours1 : openingHours , //Basic obecjt literals.
@@ -126,6 +94,79 @@ const restaurant = {
 
      */
   }
+
+
+
+  // STIRNG 
+
+
+  const airline = 'Tribhuvan Internatinal' ;
+        
+
+ const plane = 'A320' ;
+
+  console.log(airline.length);
+  console.log(airline[0]);
+  console.log(airline[1]);
+  console.log(plane[1]);
+  console.log(plane.length);
+  console.log('What'.length);
+  console.log(airline.indexOf('r'));//to find the position of the element of the airplane
+
+
+  console.log(airline.slice(4));// It will print the airline string starting it from th e element 4
+
+   console.log(airline.slice(4, 7 ));//it will print the result in the console starting from the 4 to 7 containg from the 4 and lasted to 7 conatinig only 3 element
+
+
+
+
+   const checkmiddleseat = function (seat) {
+     
+      const s = seat.slice(-1);
+      if( s=== 'B' || s==='E'){
+        console.log( 'You got middle seat 😒');
+      }else{
+        console.log('Congrats 🏆🎉');
+      }
+
+
+   }
+
+   checkmiddleseat('11B')
+   checkmiddleseat('11C')
+   checkmiddleseat('11E')
+   checkmiddleseat('11A')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
        
