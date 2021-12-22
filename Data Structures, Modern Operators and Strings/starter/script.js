@@ -247,7 +247,57 @@ maskcredit(6643614868478);
   const message2 = ' Bad weather .. All Plane depature is delayed';
   console.log(message2.repeat(5));
   //reapting the same message over and again
-  
+
+
+
+
+
+
+
+
+       //Coding Challenge 4 String
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -771,7 +821,6 @@ console.log(a, b, c);
               const guest1 = restaurant.noofguest1  ?? 10 ;
      
                console.log(guest1);
-
 
 
 
