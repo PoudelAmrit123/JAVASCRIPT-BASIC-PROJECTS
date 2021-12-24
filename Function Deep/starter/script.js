@@ -3,6 +3,7 @@
 
    // Moving from the basic introduction to some more Function
 
+<<<<<<< HEAD
   //Default parameter
 
 
@@ -25,3 +26,12 @@
    
    
    console.log(bookings);
+=======
+   const happy = 'Awesome'
+  console.log(` Function is  ${happy} ! 😊`);
+
+
+
+
+
+>>>>>>> 1c85cbd43ac843a2a11b10ebe6123e762d0fa0df
