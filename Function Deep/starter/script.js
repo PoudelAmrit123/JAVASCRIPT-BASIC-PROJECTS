@@ -78,8 +78,8 @@
 
 
 
+ /*
 
-       
        const oneword = function (str){
  return str.replace(/ /g , '').toLowerCase();
   
@@ -104,6 +104,27 @@
        trimmed('JavaScript is good language!' , oneword);
 
 
+ */
+
+       const greating = function (greating) {
+
+         return function (name) {
+            console.log( `${greating}! ${name}`);
+            
+         }
+          
+       }
+  const greatingHEy = greating('Hi');
+         greatingHEy('Amrit');
+         greating('Hi')('Amrit');  //OR we can simply write like this 
+
+  // Here First greating function is called and it takes an argument greating i.e HI and store the value in const greatingHEy which again become function on its own and then for the retun part inside the function it work as the calling function
+
+     // Arry Function 
+
+     const greatingArr = greating => name =>  console.log( `${greating}! ${name}`);
+
+     greatingArr('Hello ' )('Amrit');
 
 
 
