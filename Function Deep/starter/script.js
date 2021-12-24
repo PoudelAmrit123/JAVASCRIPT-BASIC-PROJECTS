@@ -3,10 +3,10 @@
 
    // Moving from the basic introduction to some more Function
 
-<<<<<<< HEAD
+
   //Default parameter
 
-
+  /*
 
   const bookings = [];
    const createBooking = function  (FlightNum , Noofpassenger=1 , price = 199 *Noofpassenger) {
@@ -26,12 +26,37 @@
    
    
    console.log(bookings);
-=======
-   const happy = 'Awesome'
-  console.log(` Function is  ${happy} ! 😊`);
+
+
+       */
 
 
 
 
+   // Passing Argument Functiality
 
->>>>>>> 1c85cbd43ac843a2a11b10ebe6123e762d0fa0df
+       const flight = 'Lh290';
+
+       const jonas = {
+          name : 'Amrit Poudel' ,
+          passport : 234234124 ,
+
+       };
+
+       const checkin = function (flightnum , passenger ) {
+
+         passenger.name = 'Mr.' + passenger.name ;
+
+         if (passenger.passport ===234234124  ) {
+            alert(' Checked! In');
+            
+         }else {
+            alert(' Invalid Passport');
+         }
+
+          
+       }
+
+       checkin(flight , jonas);
+       console.log(flight);
+       console.log(jonas);
