@@ -106,6 +106,12 @@
 
  */
 
+
+
+       //FUNCTION RETURNING FUNCTION
+       /*
+
+
        const greating = function (greating) {
 
          return function (name) {
@@ -125,6 +131,78 @@
      const greatingArr = greating => name =>  console.log( `${greating}! ${name}`);
 
      greatingArr('Hello ' )('Amrit');
+
+
+ 
+
+       */
+
+
+     // CALL AND APPLY METHOD
+
+   //1 . CALL METHOD
+
+ const tara = {
+           airline : 'tara' , 
+           taracode : 'LH' , 
+           bookings : [ ],
+
+           book : function (flightnum , name) {
+              console.log(` ${name} booked a seat on ${this.airline} flight ${this.taracode} ${flightnum}.`     );
+
+ this.bookings.push({ Flight :   `${this.taracode}  , name` })
+
+
+         } ,
+    
+        }
+
+             tara.book(239 , 'Amrit Poudel');
+             tara.book(122 , 'Sagar Sharma');
+
+
+             const yeti = {
+               airline : 'yeti' , 
+               taracode : 'EW' , 
+               bookings : [ ],
+    
+            };
+
+            const book = tara.book ; // HEre we specify book as equal to the yeti book value 
+ 
+            book.call( yeti , 19 , 'Amrit POudel');
+            console.log(yeti); 
+             // HEre we with the help of the CALL FUnction we can specify the this keyword 
+
+
+
+  //Apply Method 
+      //This method is similar to that of call method but it took the argument in an arry like
+
+      const flightdata = [ 233 , ' SHyam '];
+
+      book.apply ( yeti , flightdata) ; 
+      console.log(yeti );
+
+       // But we can use spread operator in the modern java script so nowdays apply method is rarely used
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
