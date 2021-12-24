@@ -1,5 +1,9 @@
 'use strict';
 
+       ``
+
+
+
 
    // Moving from the basic introduction to some more Function
 
@@ -35,6 +39,7 @@
 
    // Passing Argument Functiality
 
+     /*
        const flight = 'Lh290';
 
        const jonas = {
@@ -60,3 +65,90 @@
        checkin(flight , jonas);
        console.log(flight);
        console.log(jonas);
+
+       */
+
+
+
+
+
+
+       //FUNCTION ACCEPTING CALLBACK
+
+
+
+
+
+       
+       const oneword = function (str){
+ return str.replace(/ /g , '').toLowerCase();
+  
+       };
+
+
+       const Firstcapatial  = function (str){
+
+  const [ first , ...last ] = str.split(' ');
+
+      return [first.toUpperCase() , ...last].join(' ');
+       };
+
+       const trimmed = function (str , fn ) {
+
+
+         console.log( `Original string : ${str}`);
+          console.log( ` Transfored String : ${fn(str)}`);
+       };
+
+       trimmed('JavaScript is good language!' , Firstcapatial);
+       trimmed('JavaScript is good language!' , oneword);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
