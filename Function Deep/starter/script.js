@@ -12,6 +12,9 @@
 
   /*
 
+
+
+
   const bookings = [];
    const createBooking = function  (FlightNum , Noofpassenger=1 , price = 199 *Noofpassenger) {
 // here in Es6 we can set default value right away in the function directly and can also set the value which is predefined like that of passenger 
