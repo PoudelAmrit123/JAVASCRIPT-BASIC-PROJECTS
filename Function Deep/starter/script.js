@@ -297,6 +297,9 @@ document.querySelector('.poll').addEventListener('click' , poll.registernewnumbe
 
     //CLOUSERS
 
+
+  /*
+
     const securebooking = function(){
    let passengercount =  0 ; 
 
@@ -315,11 +318,17 @@ booker ();
 booker ();
 booker ();
 
+ */
 
 
 
+  // Watch youtube video for more clreaing the concept bcx its ver  important to undertand the closure 
 
 
+    //Coding Challenge ( CLosure )
+
+
+    
 
 
 
