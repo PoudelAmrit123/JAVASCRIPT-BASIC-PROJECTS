@@ -270,9 +270,24 @@ document.querySelector('.poll').addEventListener('click' , poll.registernewnumbe
  */
 
 
+   // iMMEDIATELY INVOKED FUNCTION EXPRESSION
 
+      const onlyonce = function(num){
+         console.log(  ` This will  never agian ${num} `);
+      }
+      onlyonce(0);
+      onlyonce(1);
+ // But actually it works and can be called anytime in the function so we do this to make only one time using function 
+  
+  (function () {
 
+   console.log( ` This is also never run agian `);
+     
+  }) ();
 
+   // Actually by wrapping the function call we can make it ine time run function where we will call it only once and write after declaring the function
+   
+   
 
 
 
