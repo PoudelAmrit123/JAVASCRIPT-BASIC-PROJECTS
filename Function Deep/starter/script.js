@@ -188,14 +188,37 @@
        
 
 
+          //Bind Function
+
+         //    By using the bind function we shouldnot be input the call method time and again . BInd function create the whole new function
+
+         // const Bindyeti = book.bind(yeti);
+         const Bindtara = book.bind(tara);
+
+
+    Bindtara(23 , 'raju');
+    Bindtara(31 , 'Himanshu');
+
+        // we can also prest the value using bind function
+
+const Bindyeti = book.bind(yeti , 50);//HEre 50 value is preset value 
+
+          Bindyeti ('raju');
 
 
 
+          //Add event listener 
 
+          yeti.planes = 300 ; 
 
+          yeti.buyplanes = function () {
+         
 
+             this.planes++;
+             console.log(this.planes);
+          }
 
-
+document.querySelector('.buy').addEventListener('click' , yeti.buyplanes.bind(yeti));//HEre we need to pass bind function 
 
 
 
