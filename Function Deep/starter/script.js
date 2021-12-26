@@ -272,6 +272,8 @@ document.querySelector('.poll').addEventListener('click' , poll.registernewnumbe
 
    // iMMEDIATELY INVOKED FUNCTION EXPRESSION
 
+
+    /*
       const onlyonce = function(num){
          console.log(  ` This will  never agian ${num} `);
       }
@@ -289,11 +291,29 @@ document.querySelector('.poll').addEventListener('click' , poll.registernewnumbe
    
    
 
+      */
 
 
 
+    //CLOUSERS
+
+    const securebooking = function(){
+   let passengercount =  0 ; 
+
+   return function (){
+      passengercount ++;
+      console.log(  ` ${passengercount} passenger`);
+   }
 
 
+
+    }
+
+   const booker =  securebooking();
+
+booker ();
+booker ();
+booker ();
 
 
 
