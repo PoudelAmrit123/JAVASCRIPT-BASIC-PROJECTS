@@ -325,11 +325,12 @@ booker ();
   // Watch youtube video for more clreaing the concept bcx its ver  important to undertand the closure 
 
 
-    //Coding Challenge ( CLosure )
-
-
     
 
+                 //*********************//
+                 //   FUNCTION WRAP UP 
+                //*********************//
+     
 
 
 
