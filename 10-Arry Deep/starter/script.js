@@ -74,3 +74,55 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+  let arr  = [ 'a ' , 'b' , 'c' , 'd' , 'e'];
+       //SLice 
+  console.log(arr.slice(2));
+  console.log( arr.slice(2 , 4));// HEre it will slice form 2 and difference between 4 and 2 .
+  console.log(arr.slice(-2));
+  console.log(arr.slice());
+
+       
+   //SPLICE 
+   console.log(arr.splice(2));
+      //  It will splice the element form the 2 element and it will not include in the arr 
+   console.log(arr);
+
+
+   // Reverese
+
+   let arr2  = [ 'a ' , 'b' , 'c' , 'd' , 'e'];
+
+
+console.log(arr2.reverse());
+console.log(arr2);  // It mutate the arry i.e forms the new arry doing the task that is allowed to do
+
+     // Contact 
+
+      // HEre in the contact method it helps us to join the two arry 
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
