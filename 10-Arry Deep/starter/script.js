@@ -82,11 +82,11 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+// ]);
 
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
@@ -166,7 +166,33 @@ console.log(arr2);  // It mutate the arry i.e forms the new arry doing the task 
 
 
 
+       // ForEach MEthod for Maps and Sets
 
+       
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+   currencies.forEach( function( value , key , map){
+
+console.log(`${key} : ${value}`);
+
+   })
+
+
+   //Set
+
+   const currenceunique = new Set (['USD' , 'EUR' , 'GBP'])
+
+   console.log(currenceunique);
+
+   currenceunique.forEach( function ( value  , key , map){
+    console.log(`${key} : ${value}`);
+
+
+   })
 
 
 
