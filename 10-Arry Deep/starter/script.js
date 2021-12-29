@@ -1,5 +1,8 @@
 'use strict';
 
+``
+
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // BANKIST APP
@@ -85,9 +88,23 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+     // Simple Method in the arry function
+     /*
+
+
+
+
 
   let arr  = [ 'a ' , 'b' , 'c' , 'd' , 'e'];
        //SLice 
@@ -114,13 +131,36 @@ console.log(arr2);  // It mutate the arry i.e forms the new arry doing the task 
      // Contact 
 
       // HEre in the contact method it helps us to join the two arry 
+
+
+ */
+
+
+      const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
       
 
+//   for ( const movement of movements){
+
+// if(movement <0){
+//   console.log( ` You deposite ${movement} rupee`);
+// } else {
+//   console.log( ` You withdraw ${Math.abs(movement)} rupee`);
+// }
+
+//   }
 
 
+    // OR we can use for Each FUncton  mehod in the arry 
+    movements.forEach( function (movement , i , arr){
 
+      if(movement <0){
+        console.log( ` Movement ${i+1}: You deposite ${movement} rupee`);
+      } else {
+        console.log( ` Movement ${i+1}: You withdraw ${Math.abs(movement)} rupee`);
+      }
 
-
+    })
 
 
 
