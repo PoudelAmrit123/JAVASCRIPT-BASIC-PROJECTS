@@ -3,6 +3,7 @@
 ``
 
 
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // BANKIST APP
@@ -105,6 +106,30 @@ const inputClosePin = document.querySelector('.form__input--pin');
   };
 
    displayMovements(account1.movements);
+
+
+
+
+
+   // Displaying the total balance
+
+const displaybalance = function( movement ){
+
+
+  const  balance = movement.reduce ( function (acc , curr , i ,arr){
+
+    return  acc + curr ; 
+  } , 0 );
+  console.log(balance);
+
+
+  labelBalance.textContent = ` ${balance} EUR`
+  ;
+ };
+
+ displaybalance(account1.movements)
+
+
 
       // Computing Name 
 
@@ -366,6 +391,8 @@ console.log(movementDescription );
 
   // FILTER METHOD
 
+
+   /*
   const deposit = movements.filter( function (mov) {
 
     return mov > 0 ;
@@ -381,3 +408,46 @@ const withdrawl =  movements.filter( function (mov) {
   
 })
 console.log(withdrawl);
+
+  */
+
+
+
+
+
+   //  The reduce Method
+
+  /*
+   console.log(movements);
+
+   const balance = movements.reduce( function (acc , curr , i  ,arr) {
+     return acc + curr ;
+
+     
+   } , 0);// Here it takes  four different element that is accumulator , current value , iteration , and  whole arry 
+
+   // Here will declare 0 as the ddefault or starter value
+
+
+   console.log(balance);
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
