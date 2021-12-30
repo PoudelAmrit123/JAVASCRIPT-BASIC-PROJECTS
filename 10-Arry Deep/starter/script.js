@@ -109,11 +109,6 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 
 
-      // Map  , filter , and reduce method 
-
-      first Map method 
-
-
 
 
 
@@ -188,7 +183,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 //   ['GBP', 'Pound sterling'],
 // ]);
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
@@ -313,6 +308,38 @@ console.log(`${key} : ${value}`);
 
 
      
+
+
+
+      // Map  , filter , and reduce method 
+
+  
+   const EURtoUSd = 1.1 ; 
+
+    const movementsUSD =  movements.map( function ( mov){
+
+        return mov * EURtoUSd;
+     }) ; 
+
+     console.log(movementsUSD);
+     console.log(movementsUSD);
+
+
+    const movementDescription =  movementsUSD.map ( function( mov , i , arr ){
+
+      if(mov <0){
+        return( ` Movement ${i+1}: You deposite ${mov} rupee`);
+      } else {
+        return( ` Movement ${i+1}: You withdraw ${Math.abs(mov)} rupee`);
+      }
+
+     })
+  //  WE DONOT NEED TO CALL THE FUNCTION BCZ THE MAP METHOD CALL THE FUNCTION ITSELF 
+
+console.log(movementDescription );
+
+
+
 
 
 
