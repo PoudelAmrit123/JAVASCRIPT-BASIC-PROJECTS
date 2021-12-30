@@ -125,8 +125,6 @@ const inputClosePin = document.querySelector('.form__input--pin');
     };
 
 createusername(accounts);
-console.log(accounts);
-
 
 
 
@@ -366,6 +364,20 @@ console.log(movementDescription );
 
 
 
+  // FILTER METHOD
+
+  const deposit = movements.filter( function (mov) {
+
+    return mov > 0 ;
+     
+   });
+
+      console.log(deposit);
 
 
 
+const withdrawl =  movements.filter( function (mov) {
+   return  mov < 0 ;
+  
+})
+console.log(withdrawl);
