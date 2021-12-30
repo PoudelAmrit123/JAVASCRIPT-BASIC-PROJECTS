@@ -106,8 +106,26 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
    displayMovements(account1.movements);
 
+      // Computing Name 
 
+    
 
+    const createusername = function (accs){
+
+          accs.forEach( function (acc) {
+            acc.username  = acc.owner.toLowerCase().split(' ').map( function (name){
+
+              return name[0] ;     
+             }).join('') ;
+          });
+
+     
+
+     
+    };
+
+createusername(accounts);
+console.log(accounts);
 
 
 
@@ -313,6 +331,8 @@ console.log(`${key} : ${value}`);
 
       // Map  , filter , and reduce method 
 
+
+       /*
   
    const EURtoUSd = 1.1 ; 
 
@@ -342,7 +362,7 @@ console.log(movementDescription );
 
 
 
-
+ */
 
 
 
