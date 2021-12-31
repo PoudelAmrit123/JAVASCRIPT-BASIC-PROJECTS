@@ -501,8 +501,16 @@ console.log(totaldeposite);
 
 
 
+   // find Function in the arry 
 
 
+
+   const firstwithdrawl = movements.find( function ( mov){
+
+return mov < 0 ;
+   });
+   console.log(firstwithdrawl); // Here find arry and filter arry is a bit of similar but filter return all the elements that matches the properties while find function only retun the first element of the corrected function
+   
 
 
 
