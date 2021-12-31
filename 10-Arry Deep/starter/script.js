@@ -1,6 +1,9 @@
 'use strict';
 
-``
+
+`  `
+
+
 
 
 
@@ -93,7 +96,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
   <div class="movements__row">
   <div class="movements__type movements__type--${type}"> ${i+1} ${type}</div>
   
-  <div class="movements__value"> ${mov}</div>
+  <div class="movements__value"> ${mov}€</div>
   
   ` ;
 
@@ -123,13 +126,51 @@ const displaybalance = function( movement ){
   console.log(balance);
 
 
-  labelBalance.textContent = ` ${balance} EUR`
+  labelBalance.textContent = ` ${balance} €`
   ;
  };
 
  displaybalance(account1.movements)
 
 
+   // Display Summary
+
+     const calcdisplaysummary  = function ( movements){
+
+  const income  =  movements.filter( function (mov){
+    return mov > 0 
+  }).reduce( function ( acc , cir ){
+    return acc + cir ;
+  },0);
+
+   labelSumIn.textContent = `${income}€  `
+    
+   const outgoing  =  movements.filter( function (mov){
+    return mov < 0 
+  }).reduce( function ( acc , cir ){
+    return acc + cir ;
+  },0);
+  
+  labelSumOut.textContent = `${Math.abs(outgoing)}€  `
+  
+  
+
+  const  interst = movements.filter( function( mov ){
+    return mov > 0 ;
+  } ).map( function ( deposit){
+     return deposit * 1.2/100 ;
+  }).filter( function ( int  , i , arr){
+    return int >= 1 ; 
+  }).reduce( function ( acc , int){
+     return acc + int ; 
+
+  } , 0 );
+  
+  labelSumInterest.textContent = `${Math.abs(interst)}€  `
+
+
+  }
+     calcdisplaysummary(account1.movements);
 
       // Computing Name 
 
@@ -438,9 +479,25 @@ console.log(withdrawl);
 
 
 
+  // Magic of chaining Method
+ 
+  /*
+
+const eurotousd = 1.1 ;
+  //Pipeline 
+const totaldeposite = movements.filter(function ( mov){
+  return mov > 0 ; 
+} ).map( function ( mov){
+   return mov * eurotousd ;
+}).reduce( function ( acc , cir ){
+    return acc + cir ;
+} , 0);
 
 
+console.log(totaldeposite);
 
+
+ */
 
 
 
