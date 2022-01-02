@@ -142,7 +142,7 @@ const displaybalance = function( movement ){
 
    // Display Summary
 
-     const calcdisplaysummary  = function ( movements){
+     const calcdisplaysummary  = function ( account ){
 
   const income  =  movements.filter( function (mov){
     return mov > 0 
@@ -165,7 +165,7 @@ const displaybalance = function( movement ){
   const  interst = movements.filter( function( mov ){
     return mov > 0 ;
   } ).map( function ( deposit){
-     return deposit * 1.2/100 ;
+     return  (deposit * account.interestRate)/100 ;
   }).filter( function ( int  , i , arr){
     return int >= 1 ; 
   }).reduce( function ( acc , int){
@@ -230,7 +230,7 @@ displayMovements(currentAccount.movements);
 
   // display summary
 
-  calcdisplaysummary(currentAccount.movements);
+  calcdisplaysummary(currentAccount);
 
 
 
