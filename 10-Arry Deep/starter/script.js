@@ -108,7 +108,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
   };
 
-   displayMovements(account1.movements);
+   
 
 
 
@@ -130,7 +130,7 @@ const displaybalance = function( movement ){
   ;
  };
 
- displaybalance(account1.movements)
+ 
 
 
    // Display Summary
@@ -170,8 +170,7 @@ const displaybalance = function( movement ){
 
 
   }
-     calcdisplaysummary(account1.movements);
-
+    
       // Computing Name 
 
     
@@ -193,8 +192,43 @@ const displaybalance = function( movement ){
 createusername(accounts);
 
 
+  // Event handler
+  let currentAccount;
+
+btnLogin.addEventListener('click', function (e) {
+  // Prevent form from submitting
+  e.preventDefault();
+
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+   
+  //display UI and message
+      labelWelcome.textContent = 
+      `  Welcome   back ${ currentAccount.owner.split(' ')[0]}` ;
+
+      containerApp.style.opacity = 100 ; 
+  
+
+    inputLoginPin.value = inputLoginUsername.value = '';
+    inputLoginPin.blur();
+
+// Display movements
+displayMovements(currentAccount.movements);
+  // Display balance  
+  displaybalance(currentAccount.movements)
+
+  // display summary
+
+  calcdisplaysummary(currentAccount.movements);
 
 
+
+  }
+});
 
 
 
@@ -503,7 +537,7 @@ console.log(totaldeposite);
 
    // find Function in the arry 
 
-
+  /*
 
    const firstwithdrawl = movements.find( function ( mov){
 
@@ -511,6 +545,8 @@ return mov < 0 ;
    });
    console.log(firstwithdrawl); // Here find arry and filter arry is a bit of similar but filter return all the elements that matches the properties while find function only retun the first element of the corrected function
    
+
+    */
 
 
 
