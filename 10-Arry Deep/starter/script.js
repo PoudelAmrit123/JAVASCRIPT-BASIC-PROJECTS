@@ -123,36 +123,54 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
    // Displaying the total balance
 
-const displaybalance = function( movement ){
-
-
-  const  balance = movement.reduce ( function (acc , curr , i ,arr){
-
-    return  acc + curr ; 
-  } , 0 );
-  console.log(balance);
-
-
-  labelBalance.textContent = ` ${balance} €`
-  ;
- };
-
- 
+   const calcDisplayBalance = function (acc) {
+    acc.balance = acc.movements.reduce( function (acc , mov){
+  return acc + mov ;
+    } , 0);
+    labelBalance.textContent = `${acc.balance}€`;
+  };
+  
 
 
    // Display Summary
 
+   const calcDisplaySummary = function (acc) {
+    const incomes = acc.movements
+      .filter(mov => mov > 0)
+      .reduce((acc, mov) => acc + mov, 0);
+    labelSumIn.textContent = `${incomes}€`;
+  
+    const out = acc.movements
+      .filter(mov => mov < 0)
+      .reduce((acc, mov) => acc + mov, 0);
+    labelSumOut.textContent = `${Math.abs(out)}€`;
+  
+    const interest = acc.movements
+      .filter(mov => mov > 0)
+      .map(deposit => (deposit * acc.interestRate) / 100)
+      .filter((int, i, arr) => {
+        // console.log(arr);
+        return int >= 1;
+      })
+      .reduce((acc, int) => acc + int, 0);
+    labelSumInterest.textContent = `${interest}€`;
+  };
+  
+
+
+     // Same Display Summary By own
+ /*
      const calcdisplaysummary  = function ( account ){
 
-  const income  =  movements.filter( function (mov){
+  const income  =  account.movements.filter( function (mov){
     return mov > 0 
   }).reduce( function ( acc , cir ){
     return acc + cir ;
   },0);
 
-   labelSumIn.textContent = `${income}€  `
+   labelSumIn.textContent = `${income}€  `;
     
-   const outgoing  =  movements.filter( function (mov){
+   const outgoing  =  account.movements.filter( function (mov){
     return mov < 0 
   }).reduce( function ( acc , cir ){
     return acc + cir ;
@@ -162,7 +180,7 @@ const displaybalance = function( movement ){
   
   
 
-  const  interst = movements.filter( function( mov ){
+  const  interst = account.movements.filter( function( mov ){
     return mov > 0 ;
   } ).map( function ( deposit){
      return  (deposit * account.interestRate)/100 ;
@@ -178,6 +196,7 @@ const displaybalance = function( movement ){
 
   }
     
+  */
       // Computing Name 
 
     
@@ -197,6 +216,26 @@ const displaybalance = function( movement ){
     };
 
 createusername(accounts);
+
+
+
+  // Updatng UI Function
+
+const updateUI = function (acc) {
+  // Display movements
+  displayMovements(acc.movements);
+
+  // Display balance
+  calcDisplayBalance(acc);
+
+  // Display summary
+  calcDisplaySummary(acc);
+};
+
+
+
+
+
 
 
   // Event handler
@@ -223,42 +262,38 @@ btnLogin.addEventListener('click', function (e) {
     inputLoginPin.value = inputLoginUsername.value = '';
     inputLoginPin.blur();
 
-// Display movements
-displayMovements(currentAccount.movements);
-  // Display balance  
-  displaybalance(currentAccount.movements)
 
-  // display summary
-
-  calcdisplaysummary(currentAccount);
-
+ // Update UI
+ updateUI(currentAccount);
 
 
   }
 });
 
 
+      // Transfering the Money 
+btnTransfer.addEventListener('click', function (e) {
+  e.preventDefault();
+  const amount = Number(inputTransferAmount.value);
+  const receiverAcc = accounts.find(
+    acc => acc.username === inputTransferTo.value
+  );
+  inputTransferAmount.value = inputTransferTo.value = '';
 
+  if (
+    amount > 0 &&
+    receiverAcc &&
+    currentAccount.balance >= amount &&
+    receiverAcc?.username !== currentAccount.username
+  ) {
+    // Doing the transfer
+    currentAccount.movements.push(-amount);
+    receiverAcc.movements.push(amount);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Update UI
+    updateUI(currentAccount);
+  }
+});
 
 
 
