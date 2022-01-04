@@ -96,10 +96,20 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 
 
-    const displayMovements = function (movements) {
+
+
+
+
+
+    const displayMovements = function (movements , sort= false) {
       
+
+const movs = sort ? movements.slice().sort( function ( a , b){
+  return a- b ;
+}): movements ;
+
      containerMovements.innerHTML =''; 
-   movements.forEach( function ( mov , i){
+   movs.forEach( function ( mov , i){
 
  const type =  mov > 0 ? 'deposit' : 'withdrawal' ;
    
@@ -322,7 +332,22 @@ btnTransfer.addEventListener('click', function (e) {
   });
   
 
+  // Add sorting 
+ let sorted = true ;
+ 
+   btnSort.addEventListener( 'click' , function (e){
+  e.preventDefault();
 
+  displayMovements(currentAccount.movements , !sorted );
+
+sorted = !sorted ;
+
+
+
+
+
+
+   })
 
 
 
@@ -695,7 +720,7 @@ return mov < 0 ;
 
        //FLAT 
 
-
+  /*
        const arr = [[1 , 2, 3,] , 4, [ 5 ,6 , 7 ] ,8];
       console.log(arr.flat());  // It will combine the nested arry as it said by the name flatten but by default it can only can flaten the  arry which is only 1 level deep 
 
@@ -718,7 +743,40 @@ return mov < 0 ;
           return acc = acc + curr ; 
       } , 0);
       console.log(summaryofall);
-      
 
 
 
+*/
+
+
+         //SORTING OF  THE ARRY 
+
+     const names = [ ' Amrit ' , 'Sangam ' , ' Mausam ' , ' Krishna '];
+
+        console.log(names.sort( ));
+
+
+          //  But it doesnot work on the number system 
+          // so WE have to do this instead 
+
+          console.log(movements);
+
+          //return  < 0 a , b
+          //return  > 0 b , a
+            // Ascending order
+          console.log(movements.sort( function ( a , b){
+
+          if ( a > b)
+            return 1 
+            if ( b<a)
+             return -1
+          }));
+
+            // But we cann do it more simple way as shown in figure 
+
+            console.log(movements.sort( function ( a , b){
+
+          return a-b ;
+              }));
+    
+          
