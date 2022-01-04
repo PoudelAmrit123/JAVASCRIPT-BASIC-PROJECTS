@@ -668,6 +668,8 @@ return mov < 0 ;
 
     // Some and every 
      
+
+    /*
     //SOME
   console.log(movements);
   console.log(movements.includes(-130));
@@ -685,6 +687,38 @@ return mov < 0 ;
      console.log(account4.movements.every( mov => mov > 0  ));
 
 
+ */
 
-     
+
+
+     // Flat and flat map method 
+
+       //FLAT 
+
+
+       const arr = [[1 , 2, 3,] , 4, [ 5 ,6 , 7 ] ,8];
+      console.log(arr.flat());  // It will combine the nested arry as it said by the name flatten but by default it can only can flaten the  arry which is only 1 level deep 
+
+       
+      const arrDeep = [[1 , [2, 3]] , 4, [ 5 ,6 , 7 ] ,8];
+      console.log(arrDeep.flat(2));// Here it will onely fatten the arry to one level so we can perfrom the task by doing that in 2 level 
+
+          // pratical Of Flat Method
+
+      const allmovements = accounts.map ( function ( mov ){
+        return mov.movements ;
+      });
+
+      console.log(allmovements);
+
+      const allmovementsarry = allmovements.flat();
+            console.log(allmovementsarry);
+
+      const summaryofall = allmovementsarry.reduce ( function ( acc, curr){
+          return acc = acc + curr ; 
+      } , 0);
+      console.log(summaryofall);
+      
+
+
 
