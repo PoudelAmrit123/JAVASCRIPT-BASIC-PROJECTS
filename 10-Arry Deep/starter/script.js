@@ -334,7 +334,7 @@ btnTransfer.addEventListener('click', function (e) {
 
   // Add sorting 
  let sorted = true ;
- 
+
    btnSort.addEventListener( 'click' , function (e){
   e.preventDefault();
 
@@ -750,7 +750,9 @@ return mov < 0 ;
 
 
          //SORTING OF  THE ARRY 
+     
 
+          /*
      const names = [ ' Amrit ' , 'Sangam ' , ' Mausam ' , ' Krishna '];
 
         console.log(names.sort( ));
@@ -780,3 +782,6 @@ return mov < 0 ;
               }));
     
           
+ */
+
+                MORE WAY OF CREATIBG ARRY 
