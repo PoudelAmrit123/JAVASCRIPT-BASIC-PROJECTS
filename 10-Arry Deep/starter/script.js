@@ -275,6 +275,8 @@ btnLogin.addEventListener('click', function (e) {
 btnTransfer.addEventListener('click', function (e) {
   e.preventDefault();
   const amount = Number(inputTransferAmount.value);
+
+
   const receiverAcc = accounts.find(
     acc => acc.username === inputTransferTo.value
   );
@@ -294,6 +296,53 @@ btnTransfer.addEventListener('click', function (e) {
     updateUI(currentAccount);
   }
 });
+
+  // Calculating loan 
+
+ 
+
+  btnLoan.addEventListener('click', function (e) {
+    e.preventDefault();
+  
+    const amount = Number(inputLoanAmount.value);
+  
+    if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+      // Add movement
+      currentAccount.movements.push(amount);
+  
+      // Update UI
+      updateUI(currentAccount);
+    }
+    inputLoanAmount.value = '';
+  });
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // Deleting The Account 
 
@@ -612,6 +661,25 @@ return mov < 0 ;
     */
 
 
+    // Some and every 
+     
+    //SOME
+  console.log(movements);
+  console.log(movements.includes(-130));
+   // In include method it only checks for the equality whereas in  some we can pass the condition 
+
+   console.log(movements.some( function ( mov){
+     return mov > 2900 ;
+   }));
 
 
+     // EVERY 
+
+
+     console.log(movements.every( mov => mov > 0  ));
+     console.log(account4.movements.every( mov => mov > 0  ));
+
+
+
+     
 
