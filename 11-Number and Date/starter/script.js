@@ -333,8 +333,16 @@ btnSort.addEventListener('click', function (e) {
 
       */
 
+     /*
+
      // Remainder Operator 
 
          console.log( 5 % 2);
           //   Here result is 1 . Thats all about the remainder 
-          
+
+
+            */
+
+
+          // Big Int
+          A BigInt value, also sometimes just called a BigInt, is a bigint primitive, created by appending n to the end of an integer literal, or by calling the BigInt() constructor (but without the new operator) and giving it an integer value or string value.
