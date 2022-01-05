@@ -251,3 +251,27 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+
+
+
+       // Number introduction 
+
+
+   console.log(23 === 23.0);
+
+     //Conversion
+
+     console.log(Number('23'));
+     //But there  is a better way of doing this conversion function
+
+     console.log(+'23');
+
+        // ParseInt 
+        console.log(Number.parseInt('2rem'));
+        console.log(Number.parseFloat('2.3rem'));  // HEre by using parseInt and parseFLoat function it help us to write the number excluding the words
+
+  // Checking If the number is number or not 
+  console.log(Number.isFinite('23'));//False
+  console.log(Number.isFinite(23)); //true
+  
+
