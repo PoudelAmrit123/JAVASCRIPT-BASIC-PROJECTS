@@ -1,5 +1,7 @@
 'use strict';
 
+
+`  ` 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // BANKIST APP
@@ -78,22 +80,34 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-/////////////////////////////////////////////////
+/////////////////////////////////////////////////`
 // Functions
 
-const displayMovements = function (movements, sort = false) {
+const displayMovements = function ( acc , sort = false) {
   containerMovements.innerHTML = '';
-
-  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+  
+  const movs = sort ? acc.movements.slice().sort((a, b) => a - b) : acc.movements;
 
   movs.forEach(function (mov, i) {
+
+    const dategain =  new Date (acc.movementsDates[i]);
+    const year = dategain.getFullYear();
+    const month = ` ${dategain.getMonth() + 1}`.padStart(2, 0) ; 
+    const date =  ` ${dategain.getDate()}`.padStart(2, 0) ;  
+
+   
+    const displaydate =  `  ${year} / ${month} / ${date}  ` ;
+
     const type = mov > 0 ? 'deposit' : 'withdrawal';
+
 
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
+    <div class="movements__date"> ${ displaydate}</div>
+
         <div class="movements__value">${mov.toFixed(2)}€</div>
       </div>
     `;
@@ -142,7 +156,7 @@ createUsernames(accounts);
 
 const updateUI = function (acc) {
   // Display movements
-  displayMovements(acc.movements);
+  displayMovements(acc);
 
   // Display balance
   calcDisplayBalance(acc);
@@ -150,6 +164,27 @@ const updateUI = function (acc) {
   // Display summary
   calcDisplaySummary(acc);
 };
+
+  // Dates Showing 
+  const now = new Date ( );
+  const year = now.getFullYear();
+  const month = ` ${now.getMonth() + 1}`.padStart(2, 0) ; 
+  const date =  ` ${now.getDate()}`.padStart(2, 0) ;  
+ 
+ const hour = now.getHours();
+ const min = now.getMinutes();
+
+
+ labelDate.textContent =  ` ${year} / ${month} / ${date} , ${hour} : ${min} ` ; 
+
+
+
+
+
+
+
+
+
 
 ///////////////////////////////////////
 // Event handlers
@@ -198,6 +233,10 @@ btnTransfer.addEventListener('click', function (e) {
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
 
+     //Adding Date
+     currentAccount.movementsDates.push ( new Date ().toISOString);
+     receiverAccount.movementsDates.push ( new Date ().toISOString());
+
     // Update UI
     updateUI(currentAccount);
   }
@@ -211,6 +250,9 @@ btnLoan.addEventListener('click', function (e) {
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
     // Add movement
     currentAccount.movements.push(amount);
+
+      //Adding the time  event
+    currentAccount.movementsDates.push( new Date ());
 
     // Update UI
     updateUI(currentAccount);
@@ -380,4 +422,3 @@ btnSort.addEventListener('click', function (e) {
    
  */
 
- 
