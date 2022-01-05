@@ -345,4 +345,39 @@ btnSort.addEventListener('click', function (e) {
 
 
           // Big Int
+          /*
           A BigInt value, also sometimes just called a BigInt, is a bigint primitive, created by appending n to the end of an integer literal, or by calling the BigInt() constructor (but without the new operator) and giving it an integer value or string value.
+
+          */
+
+
+            //  Date 
+
+              /*
+
+                  
+            const now = new Date ();
+            console.log(now);
+
+            console.log( new Date ( 2002 , 1 , 31 ));
+            console.log( new Date ( 2037 , 1 , 31 , 12 ,35 ,45 ));
+
+            console.log(account1.movementsDates[0]);
+
+            console.log( new Date ( 0));
+
+              // working with date 
+
+              const future = new Date ( 2033 , 10 , 5 );
+              console.log(future.getFullYear());
+              console.log(future.getMonth());
+              console.log(future.getDate());
+              console.log(future.getDay());
+              console.log(future.toISOString());
+              
+ console.log( Date.now());
+
+   
+ */
+
+ 
