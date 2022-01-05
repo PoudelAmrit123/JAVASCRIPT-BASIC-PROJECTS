@@ -784,4 +784,7 @@ return mov < 0 ;
           
  */
 
-                MORE WAY OF CREATIBG ARRY 
+                 
+  
+
+               Thats It from Arry and its all 23 Different Function 
