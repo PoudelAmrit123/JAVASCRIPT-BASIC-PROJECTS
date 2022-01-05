@@ -281,6 +281,7 @@ btnSort.addEventListener('click', function (e) {
 
   // Math rounding 
 
+      /*
     console.log(Math.sqrt(9));
     console.log( 25 ** (1 / 3)); // that is probably the only way of finding the cubic root of the number 
 
@@ -328,3 +329,12 @@ btnSort.addEventListener('click', function (e) {
          
   console.log((2.7945).toFixed (2));
      // Then this will round of the number and only print to 2.79 
+
+
+      */
+
+     // Remainder Operator 
+
+         console.log( 5 % 2);
+          //   Here result is 1 . Thats all about the remainder 
+          
