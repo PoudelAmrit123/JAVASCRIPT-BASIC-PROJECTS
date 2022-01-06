@@ -210,10 +210,13 @@ btnLogin.addEventListener('click', function (e) {
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
 
+  startLogOutTimer();
+
     // Update UI
     updateUI(currentAccount);
   }
 });
+
 
 btnTransfer.addEventListener('click', function (e) {
   e.preventDefault();
@@ -241,6 +244,47 @@ btnTransfer.addEventListener('click', function (e) {
     updateUI(currentAccount);
   }
 });
+
+// Start Log Out function
+   
+  const startLogOutTimer = function (){
+ let time = 12 ;
+
+   
+ const timer = setInterval( function (){
+
+  const  min = String(Math.trunc(time / 60 )).padStart(2 , 0);
+
+  const  sec =  String(time % 60 ).padStart(2 , 0);
+  labelTimer.textContent = `${min}:${sec}` ;
+
+  time--;
+
+// when 0 sec 
+if ( time === 0 ){
+
+ clearInterval(timer);
+ labelWelcome.textContent = 'Log in to get started ';
+ containerApp.style.opacity = 0 ;
+
+}
+
+
+
+ } , 1000);
+
+  };
+  
+
+
+
+
+
+
+
+
+
+
 
 btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
@@ -472,4 +516,3 @@ btnSort.addEventListener('click', function (e) {
              */
 
 
-             
