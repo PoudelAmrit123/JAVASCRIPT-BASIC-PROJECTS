@@ -426,4 +426,13 @@ btnSort.addEventListener('click', function (e) {
 
     // operation With Date 
 
-       We can do print like yesterday or today or 2 , 3, 4 days ago etc with the help of operaton with  date 
+          // We can do like today yesterday or 3 days ago with the operation with date 
+          
+          
+
+
+          // INTERLIZATION  WITH DATE 
+
+            // Read The documentation 
+
+            
