@@ -423,7 +423,7 @@ btnSort.addEventListener('click', function (e) {
  */
 
 
-
+ /*
     // operation With Date 
 
           // We can do like today yesterday or 3 days ago with the operation with date 
@@ -435,4 +435,41 @@ btnSort.addEventListener('click', function (e) {
 
             // Read The documentation 
 
-            
+
+              */
+
+
+
+
+          // Timers 
+
+            // Set Time out function 
+
+
+             /*
+              const indg = [ 'olives' , 'Spanish '];
+
+
+          const pizzaTimer = setTimeout(( ing1 , ing2) => {
+             console.log(` Here is your Pizza 🍕 ${ing1} , ${ing2}`);
+           }, 3000 , 'olives' , 'Spanish ');
+
+             console.log('waiting ..');
+
+             if ( indg.includes('Spanish')) clearTimeout(pizzaTimer)
+*/
+
+
+             //Set Timeout
+
+             /*
+
+             setInterval( function (){
+               const now = new Date (); 
+               console.log(now);
+             } , 1000) ;
+
+             */
+
+
+             
