@@ -31,3 +31,6 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+
+ const just = ' Java script bhehind the scene '
