@@ -246,7 +246,7 @@ btnTransfer.addEventListener('click', function (e) {
 });
 
 // Start Log Out function
-   
+   //CountDown 
   const startLogOutTimer = function (){
  let time = 12 ;
 
