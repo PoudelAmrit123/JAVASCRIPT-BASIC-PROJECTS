@@ -59,6 +59,7 @@ document.addEventListener('keydown', function (e) {
               //  left : s1coords.left +window.pageXOffset , 
                
               //  top :s1coords.top + window.pageYOffset ,
+
               //  behavior : 'smooth' ,
               // }) ;
 
@@ -68,9 +69,26 @@ document.addEventListener('keydown', function (e) {
                section.scrollIntoView({behavior : 'smooth'});
         })
 
+       
 
  
+    
+         document.querySelector('.nav__links').addEventListener('click' , function (e){
+                     e.preventDefault();
 
+  // Matching Strategy
+  if(e.target.classList.contains('nav__link')){
+ 
+       const id = e.target.getAttribute('href');
+  document.querySelector(id).scrollIntoView({
+    behavior : 'smooth'
+  });
+
+
+  }
+
+
+        });
 
 
 
