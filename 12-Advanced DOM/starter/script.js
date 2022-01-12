@@ -33,6 +33,42 @@ document.addEventListener('keydown', function (e) {
 });
 
 
+       // Scorlling 
+       
+  const btnscrollto = document.querySelector('.btn--scroll-to');
+
+  const section = document.querySelector('#section--1');
+
+
+        btnscrollto.addEventListener('click' , function (){
+
+
+            const s1coords = section.getBoundingClientRect();
+            console.log(s1coords);
+
+            console.log(window.pageXOffset , window.pageYOffset);
+
+             //Scorilling
+
+              // window.scrollTo(s1coords.left +window.pageXOffset , s1coords.top + window.pageYOffset)
+
+             // For Smooth Scrolling 
+
+              // window.scrollTo( {
+
+              //  left : s1coords.left +window.pageXOffset , 
+               
+              //  top :s1coords.top + window.pageYOffset ,
+              //  behavior : 'smooth' ,
+              // }) ;
+
+              
+               // New MEthod
+
+               section.scrollIntoView({behavior : 'smooth'});
+        })
+
+
  
 
 
@@ -40,6 +76,8 @@ document.addEventListener('keydown', function (e) {
 
     // Lecture *****
     // Selecting elements
+
+     /*
 console.log(document.documentElement);
 console.log(document.head);
 console.log(document.body);
@@ -125,3 +163,5 @@ logo.classList.contains('c'); // not includes
 // Don't use
 logo.clasName = 'jonas';
 
+
+*/
