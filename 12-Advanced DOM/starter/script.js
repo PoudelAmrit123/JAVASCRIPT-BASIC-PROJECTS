@@ -24,6 +24,8 @@ for (let i = 0; i < btnsOpenModal.length; i++)
   btnsOpenModal[i].addEventListener('click', openModal);
 
 btnCloseModal.addEventListener('click', closeModal);
+
+
 overlay.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', function (e) {
@@ -31,6 +33,8 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+
 
 
        // Scorlling 
@@ -215,6 +219,7 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 // h1.onmouseenter = function (e) {
 //   alert('onmouseenter: Great! You are reading the heading :D');
 // };
+<<<<<<< HEAD
 
 
 
@@ -257,3 +262,5 @@ console.log(h1.parentElement.children);
  */
 
 
+=======
+>>>>>>> d80b6e2d643c99b3c2537078a20f665e51a97fe2
