@@ -3,6 +3,7 @@
 ///////////////////////////////////////
 // Modal window
 
+ 
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
@@ -33,6 +34,7 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
 
 
 
@@ -80,8 +82,8 @@ document.addEventListener('keydown', function (e) {
          document.querySelector('.nav__links').addEventListener('click' , function (e){
                      e.preventDefault();
 
-  // Matching Strategy
-  if(e.target.classList.contains('nav__link')){
+               // Matching Strategy
+                   if(e.target.classList.contains('nav__link')){
  
        const id = e.target.getAttribute('href');
   document.querySelector(id).scrollIntoView({
@@ -94,10 +96,35 @@ document.addEventListener('keydown', function (e) {
 
         });
 
+           //tabbed components 
 
+           
 
+           const tabs = document.querySelectorAll('.operations__tab');
+           const tabsContainer = document.querySelector('.operations__tab-container');
+           const tabsContent = document.querySelectorAll('.operations__content');
+           
+      
 
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab'); // main things to understand
 
+  // Guard clause
+  if (!clicked) return;
+
+  // Remove active classes
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  tabsContent.forEach(c => c.classList.remove('operations__content--active'));
+
+  // Activate tab
+  clicked.classList.add('operations__tab--active');
+
+  // Activate content area
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add('operations__content--active');
+});
+ 
 
 
 
@@ -219,7 +246,6 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 // h1.onmouseenter = function (e) {
 //   alert('onmouseenter: Great! You are reading the heading :D');
 // };
-<<<<<<< HEAD
 
 
 
@@ -262,5 +288,3 @@ console.log(h1.parentElement.children);
  */
 
 
-=======
->>>>>>> d80b6e2d643c99b3c2537078a20f665e51a97fe2
