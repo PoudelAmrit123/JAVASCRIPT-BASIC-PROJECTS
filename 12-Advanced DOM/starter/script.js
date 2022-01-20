@@ -153,6 +153,21 @@ tabsContainer.addEventListener('click', function (e) {
 
 
 
+  
+   const sticky = function(){ 
+     console.log(` Sticky navigation: Intersection Observer API`);
+   }
+
+
+
+
+
+
+
+
+
+
+
 
 
     // Lecture *****
