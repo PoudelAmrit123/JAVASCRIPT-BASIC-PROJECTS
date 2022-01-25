@@ -31,7 +31,10 @@ const getcountrycode = function (country) {
   //country 1st
   fetch(`https://restcountries.eu/rest/v2/name/${country}`)
     .then(function (response) {
+       if (!response.ok)
+      throw new Error(`Country not found (${response.status})`);
       return response.json();
+
     })
     .then(function (data) {
       renderCountry(data[0]);
@@ -41,7 +44,10 @@ const getcountrycode = function (country) {
       // country 2nd
       return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
     })
-    .then(response => response.json())
+    .then(response => 
+          
+      
+  response.json() )
     .then(data => renderCountry(data, 'neighbour'))
     .catch(err => renderError(` somethings went wrong ${err.msg}Try again `));
 };
