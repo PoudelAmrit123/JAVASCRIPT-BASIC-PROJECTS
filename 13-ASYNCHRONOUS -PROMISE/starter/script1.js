@@ -21,20 +21,23 @@ const renderCountry = function (data, className = '') {
   countriesContainer.insertAdjacentHTML('beforeend', html);
   countriesContainer.style.opacity = 1;
 };
-
-
-
-
-
-const getcountrycode = function (country) {
-
+ 
+      const getcountrycode = function (country) {
+  //country 1st
   fetch(`https://restcountries.eu/rest/v2/name/${country}`)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
       renderCountry(data[0]);
-    });
+
+      const neighbour = data[0].borders[0];
+      if (!neighbour) return;
+      // country 2nd
+      return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
+    })
+    .then(response => response.json())
+    .then(data => renderCountry(data, 'neighbour'));
 };
 
 getcountrycode('nepal');
