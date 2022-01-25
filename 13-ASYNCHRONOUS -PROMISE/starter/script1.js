@@ -21,8 +21,13 @@ const renderCountry = function (data, className = '') {
   countriesContainer.insertAdjacentHTML('beforeend', html);
   countriesContainer.style.opacity = 1;
 };
- 
-      const getcountrycode = function (country) {
+
+const renderError = function (msg) {
+  countriesContainer.insertAdjacentText('beforeend', msg);
+  countriesContainer.style.opacity = 1;
+};
+
+const getcountrycode = function (country) {
   //country 1st
   fetch(`https://restcountries.eu/rest/v2/name/${country}`)
     .then(function (response) {
@@ -37,7 +42,8 @@ const renderCountry = function (data, className = '') {
       return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
     })
     .then(response => response.json())
-    .then(data => renderCountry(data, 'neighbour'));
+    .then(data => renderCountry(data, 'neighbour'))
+    .catch(err => renderError(` somethings went wrong ${err.msg}Try again `));
 };
 
 getcountrycode('nepal');
