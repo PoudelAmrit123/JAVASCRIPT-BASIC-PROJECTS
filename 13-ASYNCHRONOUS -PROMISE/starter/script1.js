@@ -155,3 +155,23 @@ getCountryData('germany');
 
 
   */
+
+
+
+
+   // codings challenges
+
+     const whereAmI11 = function ( lan , log ){
+       fetch(`https://geocode.xyz/${lan},${log}?geoit=json`)
+       .then ( res => res.json()  )
+       .then( data =>  {
+        console.log(`You are in ${data.city}, ${data.country}`);
+         console.log(data) ; 
+        
+         return fetch(`https://restcountries.eu/rest/v2/name/${data.country}`);
+       }).then( res => res.json()).then( data => renderCountry(data[0]) ).catch( err => console.error(`${err.message} 💥 `) )
+     }
+ 
+
+
+       whereAmI11(52.508, 13.381);
