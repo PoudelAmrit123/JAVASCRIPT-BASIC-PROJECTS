@@ -31,10 +31,9 @@ const getcountrycode = function (country) {
   //country 1st
   fetch(`https://restcountries.eu/rest/v2/name/${country}`)
     .then(function (response) {
-       if (!response.ok)
-      throw new Error(`Country not found (${response.status})`);
+      if (!response.ok)
+        throw new Error(`Country not found (${response.status})`);
       return response.json();
-
     })
     .then(function (data) {
       renderCountry(data[0]);
@@ -44,10 +43,7 @@ const getcountrycode = function (country) {
       // country 2nd
       return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
     })
-    .then(response => 
-          
-      
-  response.json() )
+    .then(response => response.json())
     .then(data => renderCountry(data, 'neighbour'))
     .catch(err => renderError(` somethings went wrong ${err.msg}Try again `));
 };
@@ -156,10 +152,8 @@ getCountryData('germany');
 
   */
 
-
-
-
-   // codings challenges
+// codings challenges 1st challenges
+/*
 
      const whereAmI11 = function ( lan , log ){
        fetch(`https://geocode.xyz/${lan},${log}?geoit=json`)
@@ -175,3 +169,18 @@ getCountryData('germany');
 
 
        whereAmI11(52.508, 13.381);
+
+         */
+
+// Event loop in practise
+
+console.log('Test start');
+setTimeout(() => console.log('0 sec timer'), 0);
+Promise.resolve('Resolved promise 1').then(res => console.log(res));
+
+Promise.resolve('Resolved promise 2').then(res => {
+  for (let i = 0; i < 1000000000; i++) {}
+  console.log(res);
+});
+
+console.log('Test end');
