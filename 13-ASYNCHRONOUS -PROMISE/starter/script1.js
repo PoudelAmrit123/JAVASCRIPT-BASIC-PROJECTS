@@ -50,6 +50,9 @@ const getcountrycode = function (country) {
 
 getcountrycode('nepal');
 
+
+
+  how fast can i type hahah
 ///////////////////////////////////////
 
 // Our First AJAX Call: XMLHttpRequest
@@ -227,6 +230,8 @@ const getPosition = function () {
 
       // Coding challenge no 2
 
+
+        /*
       
 const wait = function (seconds) {
   return new Promise(function (resolve) {
@@ -273,3 +278,8 @@ createImage('img/img-1.jpg')
     currentImg.style.display = 'none';
   })
   .catch(err => console.error(err));
+
+
+    */
+
+  
