@@ -173,8 +173,8 @@ getCountryData('germany');
          */
 
 // Event loop in practise
- 
-     /*
+
+/*
 console.log('Test start');
 setTimeout(() => console.log('0 sec timer'), 0);
 Promise.resolve('Resolved promise 1').then(res => console.log(res));
@@ -189,25 +189,36 @@ console.log('Test end');
 
  */
 
-    const lottery = new Promise ( function ( resolve , reject ){
-   
+/*
+const lottery = new Promise(function (resolve, reject) {
   console.log(` Lootery draw is happing 🔮`);
-     setTimeout( () => {
-      if ( Math.random() >= 0.5){
-        resolve('You Win  💰');
-      }else {
-        reject( new Error('You loose 💩'));
-      }
+  setTimeout(() => {
+    if (Math.random() >= 0.5) {
+      resolve('You Win  💰');
+    } else {
+      reject(new Error('You loose 💩'));
+    }
+  }, 2000);
+});
 
-     } , 2000) ;
+lottery.then(res => console.log(res)).catch(err => console.error(err));
 
+ */
 
+   // Geolocation Api
+    /*
 
-    });
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
 
-    lottery.then( res => console.log(res)).catch( err => console.error(err));
+    navigator.geolocation.getCurrentPosition(
+      position => resolve(position),
+      err => reject(err)
+    );
+  });
+};
 
+  getPosition().then( res => console.log(res))
 
-
-    
-
+   */
+  
