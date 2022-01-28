@@ -173,7 +173,8 @@ getCountryData('germany');
          */
 
 // Event loop in practise
-
+ 
+     /*
 console.log('Test start');
 setTimeout(() => console.log('0 sec timer'), 0);
 Promise.resolve('Resolved promise 1').then(res => console.log(res));
@@ -184,3 +185,29 @@ Promise.resolve('Resolved promise 2').then(res => {
 });
 
 console.log('Test end');
+
+
+ */
+
+    const lottery = new Promise ( function ( resolve , reject ){
+   
+  console.log(` Lootery draw is happing 🔮`);
+     setTimeout( () => {
+      if ( Math.random() >= 0.5){
+        resolve('You Win  💰');
+      }else {
+        reject( new Error('You loose 💩'));
+      }
+
+     } , 2000) ;
+
+
+
+    });
+
+    lottery.then( res => console.log(res)).catch( err => console.error(err));
+
+
+
+    
+
