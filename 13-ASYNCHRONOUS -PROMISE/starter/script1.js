@@ -299,6 +299,9 @@ console.log(res);
       
     */
 
+
+        // Handling Error
+        /*
       finding the error and handling the error in async and wait function using try catch function 
 
 
@@ -311,8 +314,11 @@ console.log(res);
           }
 
    By wrapping the entire code in the try function 
-   
 
+  
+    */
+
+      more async function 
 
 
 
