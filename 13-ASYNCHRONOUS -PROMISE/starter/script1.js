@@ -284,7 +284,8 @@ createImage('img/img-1.jpg')
 
     */
 
-  
+        // Async and await 
+        /*
 
   const wherami = async function (country ){
    const res =  await fetch(`https://restcountries.eu/rest/v2/name/${country}`)
@@ -294,9 +295,23 @@ console.log(res);
     wherami('nepal');
 
     console.log('First');
+    
+      
+    */
+
+      finding the error and handling the error in async and wait function using try catch function 
 
 
+          i.e 
 
+          try {
+            
+          } catch (error) {
+            
+          }
+
+   By wrapping the entire code in the try function 
+   
 
 
 
