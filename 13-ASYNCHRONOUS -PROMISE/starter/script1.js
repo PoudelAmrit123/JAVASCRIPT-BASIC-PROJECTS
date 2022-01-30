@@ -52,7 +52,9 @@ getcountrycode('nepal');
 
 
 
-  how fast can i type hahah
+
+      
+  
 ///////////////////////////////////////
 
 // Our First AJAX Call: XMLHttpRequest
@@ -283,3 +285,25 @@ createImage('img/img-1.jpg')
     */
 
   
+
+  const wherami = async function (country ){
+   const res =  await fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+console.log(res);
+    const data = await res.json();
+  } ;
+    wherami('nepal');
+
+    console.log('First');
+
+
+
+
+
+
+
+
+
+
+
+
+
