@@ -317,8 +317,9 @@ console.log(res);
 
   
     */
-
-      more async function 
+  // Running promises in parallel with the help of the promise all in async await function 
+  
+     Promise.all()
 
 
 
