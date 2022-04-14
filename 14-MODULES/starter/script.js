@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ///////////////////////////////////////
 // Exporting and Importing in ES6 Modules
 
@@ -145,3 +146,6 @@ const { addTocart } = require('./shoppingCart.js');
 
 // // Polifilling async functions
 // import 'regenerator-runtime/runtime';
+=======
+   strict mode
+>>>>>>> b97e6d057c7eb7e03a53af10f3383e8d4f283ead
